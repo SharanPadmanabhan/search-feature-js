@@ -9,19 +9,6 @@ const liveReload = require('livereload');
 const connectLiveReload = require('connect-livereload');
 
 const livereloadServer = liveReload.createServer();
-
-dotenv.config({ path: path.join(__dirname, '.env') });
-
-const PORT = process.env.port || process.env.PORT || 5000;
-const HOST = process.env.host || process.env.HOST || '127.0.0.1';
-
-app.use(express.json());
-
-let routes = ['assets', 'styles', 'scripts', 'utils'];
-routes.forEach((route) => {
-    app.use(`/${route}`, express.static(path.join(__dirname, 'src', route)));
-});
-
 livereloadServer.watch(path.join(__dirname, 'src'));
 
 livereloadServer.server.once('connection', () => {
@@ -31,6 +18,18 @@ livereloadServer.server.once('connection', () => {
 });
 
 app.use(connectLiveReload());
+
+dotenv.config({ path: path.join(__dirname, '.env') });
+
+const PORT = process.env.port || process.env.PORT || 5000;
+const HOST = process.env.host || process.env.HOST || '127.0.0.1';
+
+app.use(express.json());
+
+let routes = ['assets', 'components', 'styles', 'scripts', 'fonts', 'utils', 'types'];
+routes.forEach((route) => {
+    app.use(`/${route}`, express.static(path.join(__dirname, 'src', route)));
+});
 
 app.get('/', (request, response) => {
     response.status(200).sendFile(path.join(__dirname, 'src', 'index.html'));
