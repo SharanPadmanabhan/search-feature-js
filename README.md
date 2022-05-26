@@ -1,4 +1,4 @@
-# Search Bar
+# SearchBar
 
 ### A Simple search bar application created with html, css and javascript.
 
