@@ -1,0 +1,26 @@
+:root {
+    --scroll-track-color: #ffffff;
+    --scroll-track-border-color: #dfdfdf;
+
+    --scroll-thumb-hover-color: #bfbfbf;
+    --scroll-thumb-default-color: #cfcfcf;
+}
+
+.search-results::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+
+.search-results::-webkit-scrollbar-track {
+    background-color: var(--scroll-track-color);
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    border: 3px solid var(--scroll-track-color);
+    background-color: var(--scroll-thumb-default-color);
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scroll-thumb-hover-color);
+}

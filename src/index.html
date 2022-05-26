@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+        <script src="scripts/script.js" type="module" defer></script>
+        <link rel="stylesheet" href="styles/style.css" />
+        <title>Search Bar</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="search-bar">
+                <input class="search-input" type="text" title="Search" placeholder="Search..." />
+                <button type="button" class="search-icon" title="Search"></button>
+            </div>
+            <ul class="search-results"></ul>
+        </div>
+
+        <!-- Search Result Template -->
+        <template class="search-result-template">
+            <li class="search-result" tabindex="0">
+                <span class="img"></span>
+                <span class="text"></span>
+            </li>
+        </template>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+@import url('./scrollBar.css');
+@import url('./searchBar.css');
+@import url('./searchResult.css');
+
+:root {
+    --search-container-color: #ffffff;
+}
+
+.container {
+    /* Position the search bar */
+    top: 25%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+
+    /* Style the container */
+    width: 650px;
+    height: auto;
+    padding: 5px;
+    display: grid;
+    border-radius: 10px;
+    grid-template-rows: 1fr auto;
+    background-color: var(--search-container-color);
+    grid-template-areas: 'search-bar' 'search-result';
+}
