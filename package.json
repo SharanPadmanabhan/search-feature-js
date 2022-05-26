@@ -6,8 +6,7 @@
     "author": "Sharan Padmanabhan",
     "scripts": {
         "start": "nodemon --quiet index.js",
-        "format": "prettier --write .",
-        "prestart": "prettier --write . && cls"
+        "format": "prettier --write ."
     },
     "license": "MIT",
     "dependencies": {
